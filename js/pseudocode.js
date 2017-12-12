@@ -14,3 +14,4 @@
 //POINT VALUE
 $('.container > .q1').data('point-value', '100')
 let pointString = $('.container > .q1').data('point-value')
+let pointNum = parseInt(pointString)
