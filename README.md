@@ -10,7 +10,7 @@
 
 [Bitballoon: Game Website](heuristic-aryabhata-8a081b.bitballoon.com)
 
-![Wireframe: Classic](/Users/nintichance/ga_wdi/projects/game_project/images/Screen Shot 2017-12-12 at 1.43.06 AM.png)
+![Wireframe: Classic](https://imgur.com/I4Ws93N)
 
-![Wirefame:for cuties](/Users/nintichance/ga_wdi/projects/game_project/images/Screen Shot 2017-12-12 at 1.43.33 AM.png)
+![Wirefame:for cuties](https://imgur.com/n7oLgJ9)
 
