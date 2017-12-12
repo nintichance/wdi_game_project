@@ -5,6 +5,9 @@ $(document).ready(function(){
         if (testAnswer === "dow jones"){
             alert("you are correct")
             $(this).css('background-color', 'green')
+        } else {
+            alert("sorry, you are not adult enough")
+            $(this).css('background-color', 'red')
         }
         })
     
