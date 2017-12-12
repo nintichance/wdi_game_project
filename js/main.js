@@ -10,6 +10,23 @@ $(document).ready(function () {
             alert("sorry, you are not adult enough")
             $(this).css('background-color', 'red')
         }
-    })
+        $('.container > .q1').data('point-value', '100')
+        let pointString = $('.container > .q1').data('point-value')
+        let pointNum = parseInt(pointString)
+        $('.scoreContainer > .score').data('points', '0')
+        let scoreString = $('.scoreContainer > .score').data('points')
+        let scoreNum = parseInt(scoreString)
+        console.log(scoreNum)
 
+        if (testAnswer === "dow jones"){
+            let scoreNumDisplay = scoreNum + pointNum
+            } else {
+            let scoreNumDisplay = scoreNum - pointNum
+            }
+            let scoreView = $('<p>')
+            $('.scoreContainer > .score').remove('.scoreContainer > .default')
+            $('.scoreContainer > .score').append(scoreView)
+            scoreView.text(`Score: ${userAnswers.scoreNumDisplay}`)    
+    })
+    
 })

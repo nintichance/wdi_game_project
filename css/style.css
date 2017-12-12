@@ -1,9 +1,10 @@
 
 .container > div{
-    background-color: #333232;
+    background-color: rgba(51,50,50, 0.5);
     padding: 1em;
     height: 45px;
     width: 95px;
+    border-radius: 4px;
 }
 .container{
     width: 75%;
@@ -36,7 +37,7 @@ html{
     height: 100%;
     width: 90%;
     background-color:black;
-    color: white;
+    color: #BDBDBD;
 }
 span{
     font-family: cursive; 
@@ -44,15 +45,17 @@ span{
 .score {
     height: 100%;
     width: 10%;
-    background-color: #EB5757;
+    background-color: (235,87,87);
 }
 header, footer{
+    color: #BDBDBD;
     height: 70px;
-    background-color:#1E1F21;
+    background-color:rgba(51,50,50, 0.5);;
 }
 .container > .categories{
     background-color:#EB5757;
     height: 25px;
+    border-radius: 4px;
 }
 .container > .test{
     color: white;
