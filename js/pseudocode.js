@@ -47,112 +47,177 @@
 
 
 // // //ONLY ADD POINTS IF ANSWER IS RIGHT
-let answersArray = []
-const answerQuestion = [
-    {
-    answer:'When I need to iron my pants with a nice firm crease ready to impress all of my business peers, I use this ironing thingy.',
-    question: 'What is that stuff that comes in a spray bottle. I think its called starch.'
-    }, 
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
-    },
-    {
-     answer: 'answer',
-     question: 'question'
+
+
+$(document).ready(function () {
+    alert("The DOM is ready! Yay!")
+    // let hoverOnDiv = $('.container > .q1').on('hover', function (){
+    //     $('.container > .q1').css('background-color', 'orange')
+    // })
+
+
+    let answersArray = []
+    let questionsArray = []
+    
+    const answerQuestion = [
+        {
+            answer:'When I need to iron my pants with a nice firm crease ready to impress all of my business peers, I use this ironing thingy.A. What is that stuff that comes in a spray bottle. I think its called starch.',
+            question: "A."
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        },
+        {
+            answer: 'answer',
+            question: 'question'
+        }
+    ]
+    console.log('WE DID IT!', answerQuestion[0].answer)
+
+    for (let i = 0; i < answerQuestion.length; i++) {
+        answersArray.push(answerQuestion[i].answer)
+        questionsArray.push(answerQuestion[i].question)
     }
-]
-for (let i = 0; i < answerQuestion.length; i++){
-    answersArray.push(answerQuestion[i].answer)
-}
+
+    console.log(`IM HERE NOW. answer ${answersArray[0]} and question ${questionsArray[0]}`)
+
+    // for (let i = 1; i < 26; i++){
+    //     console.log(`NOW. HERE. THIS. answer ${answersArray[0]} and question ${questionsArray[0]}`)
+        
+    //     $(`.container > q${i}`).on('click', function(){
+    //         console.log(`Um.... answer ${answersArray[0]} and question ${questionsArray[0]}`)
+            
+    //         let userAnswer = prompt(answerQuestion[i-1].answer)
+    //         if (userAnswer === answerQuestion[i-1].question){
+    //             alert('such a legit adulty person')
+    //             $(this).css('background-color', 'green')
+    //         } else {
+    //             alert('and you call yourself an adult?')
+    //             $(this).css('background-color', 'red')
+    //         }
+    //     })
+    // }
+
+    
+    $('.container > .questionBox').on('click', this,  function() {
+        console.log(this.id) 
+        let userResponse = prompt(answerQuestion[this.id].answer)
+        if(userResponse === answerQuestion[this.id].question){
+            alert('such a legit adulty person')
+            $(this).css('background-color', 'green')
+        } else {
+            alert('and you call yourself an adult?')
+            $(this).css('background-color', 'red') 
+        }
+    })
+
+
+
+
+
+
+
+
+})
+
+
+// let divClass = function(){
+//     let qArray = []
+//     for (let i = 0; i < 25; i++){
+//         qArray.push(i)
+//     } 
+//     let qValue = `q${q[i]}`
+//     return qValue
+// }
 
 
 
