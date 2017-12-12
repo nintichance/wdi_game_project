@@ -15,3 +15,7 @@
 $('.container > .q1').data('point-value', '100')
 let pointString = $('.container > .q1').data('point-value')
 let pointNum = parseInt(pointString)
+$('.scoreContainer > .score').data('points', '0')
+let scoreString = $('.scoreContainer > .score').data('points')
+let scoreNum = parseInt(scoreString)
+console.log(scoreNum)
