@@ -10,7 +10,7 @@
 
 [Bitballoon: Game Website](heuristic-aryabhata-8a081b.bitballoon.com)
 
-![Wireframe: Classic](https://imgur.com/I4Ws93N)
+![Wireframe:Classic](https://i.imgur.com/I4Ws93N.png)
 
-![Wirefame:for cuties](https://imgur.com/n7oLgJ9)
+![Wirefame:for cuties](https://i.imgur.com/n7oLgJ9.png)
 
