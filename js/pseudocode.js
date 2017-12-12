@@ -20,7 +20,12 @@ let scoreString = $('.scoreContainer > .score').data('points')
 let scoreNum = parseInt(scoreString)
 console.log(scoreNum)
 
+//ADDING POINTS
+let scoreNumDisplay = scoreNum + pointNum
+
 //SCORE THE USER SEES
 let scoreView = $('<p>')
 $('.scoreContainer > .score').append(scoreView)
-scoreView.text(`Score: ${scoreNum}`)
+scoreView.text(`Score: ${scoreNumDisplay}`)
+
+
