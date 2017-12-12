@@ -19,3 +19,8 @@ $('.scoreContainer > .score').data('points', '0')
 let scoreString = $('.scoreContainer > .score').data('points')
 let scoreNum = parseInt(scoreString)
 console.log(scoreNum)
+
+//SCORE THE USER SEES
+let scoreView = $('<p>')
+$('.scoreContainer > .score').append(scoreView)
+scoreView.text(`Score: ${scoreNum}`)
