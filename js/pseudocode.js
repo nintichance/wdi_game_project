@@ -1,3 +1,17 @@
+$(document).ready(function () {
+    alert("The DOM is ready! Yay!")
+    let testVariable = $('.container > .q1').on('click', function () {
+        let testAnswer = prompt("I am an adulty thing that has to do with stocks. I rhyme with iPhones")
+        if (testAnswer === "dow jones") {
+            alert("you are correct")
+            $(this).css('background-color', 'green')
+
+        } else {
+            alert("sorry, you are not adult enough")
+            $(this).css('background-color', 'red')
+        }
+    
+ 
  //UPDATE SCORE
     //if answer is correct
     //score += value of question
@@ -21,7 +35,11 @@ let scoreNum = parseInt(scoreString)
 console.log(scoreNum)
 
 //ADDING POINTS
+if (testVariable.testAnswer === "dow jones"){
 let scoreNumDisplay = scoreNum + pointNum
+} else {
+let scoreNumDisplay = scoreNum - pointNum
+}
 
 //SCORE THE USER SEES
 let scoreView = $('<p>')
@@ -29,3 +47,8 @@ $('.scoreContainer > .score').append(scoreView)
 scoreView.text(`Score: ${scoreNumDisplay}`)
 
 
+//ONLY ADD POINTS IF ANSWER IS RIGHT
+
+})
+
+}) 
