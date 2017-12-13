@@ -187,18 +187,27 @@ $(document).ready(function () {
     //     })
 //     // }
 
-    
+    let clickCounter = 0
+    let playedAnswers = []
     $('.container > .questionBox').on('click', this,  function() {
         console.log(this.id) 
+        clickCounter += 1
+        console.log(clickCounter)
         let userResponse = prompt(answerQuestion[this.id].answer)
         if(userResponse === answerQuestion[this.id].question){
             alert('such a legit adulty person')
             $(this).css('background-color', 'green')
+            playedAnswers.push(this)
         } else {
             alert('and you call yourself an adult?')
             $(this).css('background-color', 'red') 
+            playedAnswers.push(this)
         }
+        console.log(playedAnswers.length)
+        console.log(playedAnswers)
         console.log($(this).data('value'))
+
+        
         // let pointString = $(this.data('value')
         // let pointNum = parseInt(pointString)
         // $('.scoreContainer > .score').data('points', '0')
@@ -220,10 +229,15 @@ $(document).ready(function () {
         }
         $('.score > p').data('points', scoreNumDisplay)
         $('.score > p').text(`Score: ${scoreNumDisplay}`)
-        
+        if (clickCounter === 25){
+            alert(`You have finished the game. Your score is ${scoreNumDisplay}. You must be an adult!`)
+        }
     })
 })
 
+//On the 25th click, this is the last condition... Interesting, sounds like an end condition to me...
+//Make a collection of clicks on the mouse Path2D. Check to see if the progrss bar is full
+//Make a variable called counter. For every click add one to the counter. When the counter is 25, the game is over.
 // console.log($('.container > #0').data('value'))
 // let pointString = $('.container > .q1').data('point-value')
 // let pointNum = parseInt(pointString)
