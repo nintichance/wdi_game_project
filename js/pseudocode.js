@@ -56,8 +56,8 @@ $(document).ready(function () {
 //     // })
 
 
-    let answersArray = []
-    let questionsArray = []
+    // let answersArray = []
+    // let questionsArray = []
     
     const answerQuestion = [
         {
@@ -195,12 +195,13 @@ $(document).ready(function () {
         console.log(clickCounter)
         let userResponse = prompt(answerQuestion[this.id].answer)
         if(userResponse === answerQuestion[this.id].question){
-            alert('such a legit adulty person')
-            $(this).css('background-color', 'green')
-            // playedAnswers.push(this)
+            alert('such an adulty person')
+            $(this).css('background-color', 'green') 
+            $(this).off()
         } else {
             alert('and you call yourself an adult?')
             $(this).css('background-color', 'red') 
+            $(this).off()
             // playedAnswers.push(this)
         }
         // console.log(playedAnswers.length)
@@ -231,6 +232,7 @@ $(document).ready(function () {
             alert(`You have finished the game. Your score is ${scoreNumDisplay}. You must be an adult!`)
         }
     })
+
     let notPlayable = function (){
         if ($('.container > .questionBox').css('background-color')=== 'green' || $('.container > .questionBox').css('background-color')=== 'red'){
             $(this).remove('questionBox')
@@ -238,6 +240,12 @@ $(document).ready(function () {
     }
 })
 
+// $('.container').prepend('<div>')
+// $('.container').first().addClass('aestheticOnly')
+// $('.container > .aestheticOnly').css('background-color', 'green')
+// $('.container > .aestheticOnly').css('border-radius', '4px')
+// $('.container > .aestheticOnly').css('width', '95px')
+// $('.container > .aestheticOnly').css('height', '45px')
 //On the 25th click, this is the last condition... Interesting, sounds like an end condition to me...
 //Make a collection of clicks on the mouse Path2D. Check to see if the progrss bar is full
 //Make a variable called counter. For every click add one to the counter. When the counter is 25, the game is over.
