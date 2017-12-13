@@ -1,59 +1,59 @@
-// //  //UPDATE SCORE
-// //     //if answer is correct
-// //     //score += value of question
-// // //DEDUCT FROM SCORE
-// //     //if answer is incorrect
-// //     //score -= value of question
+// // //  //UPDATE SCORE
+// // //     //if answer is correct
+// // //     //score += value of question
+// // // //DEDUCT FROM SCORE
+// // //     //if answer is incorrect
+// // //     //score -= value of question
 
-// // //I need the value of the question's points
-// // //Score is collected in a <p> in the div with 
-// // //class of "score"
-// // //add the value of the questions points to the 
-// // //value of score
+// // // //I need the value of the question's points
+// // // //Score is collected in a <p> in the div with 
+// // // //class of "score"
+// // // //add the value of the questions points to the 
+// // // //value of score
 
-// //POINT VALUE
-// $('.container > .q1').on('click', function () {
-//     let testAnswer = prompt("I am an adulty thing that has to do with stocks. I rhyme with iPhones")
-//     if (testAnswer === "dow jones") {
-//         alert("you are correct")
-//         $(this).css('background-color', 'green')
+// // //POINT VALUE
+// // $('.container > .q1').on('click', function () {
+// //     let testAnswer = prompt("I am an adulty thing that has to do with stocks. I rhyme with iPhones")
+// //     if (testAnswer === "dow jones") {
+// //         alert("you are correct")
+// //         $(this).css('background-color', 'green')
 
-//     } else {
-//         alert("sorry, you are not adult enough")
-//         $(this).css('background-color', 'red')
-//     }
+// //     } else {
+// //         alert("sorry, you are not adult enough")
+// //         $(this).css('background-color', 'red')
+// //     }
 
-// $('.container > .q1').data('point-value', '100')
-// let pointString = $('.container > .q1').data('point-value')
-// let pointNum = parseInt(pointString)
-// $('.scoreContainer > .score').data('points', '0')
-// let scoreString = $('.scoreContainer > .score').data('points')
-// let scoreNum = parseInt(scoreString)
-// console.log(scoreNum)
+// // $('.container > .q1').data('point-value', '100')
+// // let pointString = $('.container > .q1').data('point-value')
+// // let pointNum = parseInt(pointString)
+// // $('.scoreContainer > .score').data('points', '0')
+// // let scoreString = $('.scoreContainer > .score').data('points')
+// // let scoreNum = parseInt(scoreString)
+// // console.log(scoreNum)
 
-// let scoreNumDisplay;
-// //ADDING POINTS
-// if (testAnswer === "dow jones"){
-//  scoreNumDisplay = scoreNum + pointNum
-// } else {
-//  scoreNumDisplay = scoreNum - pointNum
-// }
+// // let scoreNumDisplay;
+// // //ADDING POINTS
+// // if (testAnswer === "dow jones"){
+// //  scoreNumDisplay = scoreNum + pointNum
+// // } else {
+// //  scoreNumDisplay = scoreNum - pointNum
+// // }
 
-// //SCORE THE USER SEES
-// let scoreView = $('<p>')
-// $('.scoreContainer > .score').append(scoreView)
-// scoreView.text(`Score: ${scoreNumDisplay}`)
-// })
+// // //SCORE THE USER SEES
+// // let scoreView = $('<p>')
+// // $('.scoreContainer > .score').append(scoreView)
+// // scoreView.text(`Score: ${scoreNumDisplay}`)
+// // })
 
 
-// // //ONLY ADD POINTS IF ANSWER IS RIGHT
+// // // //ONLY ADD POINTS IF ANSWER IS RIGHT
 
 
 $(document).ready(function () {
-    alert("The DOM is ready! Yay!")
-    // let hoverOnDiv = $('.container > .q1').on('hover', function (){
-    //     $('.container > .q1').css('background-color', 'orange')
-    // })
+//     alert("The DOM is ready! Yay!")
+//     // let hoverOnDiv = $('.container > .q1').on('hover', function (){
+//     //     $('.container > .q1').css('background-color', 'orange')
+//     // })
 
 
     let answersArray = []
@@ -161,14 +161,14 @@ $(document).ready(function () {
             question: 'question'
         }
     ]
-    console.log('WE DID IT!', answerQuestion[0].answer)
+//     console.log('WE DID IT!', answerQuestion[0].answer)
 
-    for (let i = 0; i < answerQuestion.length; i++) {
-        answersArray.push(answerQuestion[i].answer)
-        questionsArray.push(answerQuestion[i].question)
-    }
+//     for (let i = 0; i < answerQuestion.length; i++) {
+//         answersArray.push(answerQuestion[i].answer)
+//         questionsArray.push(answerQuestion[i].question)
+//     }
 
-    console.log(`IM HERE NOW. answer ${answersArray[0]} and question ${questionsArray[0]}`)
+//     console.log(`IM HERE NOW. answer ${answersArray[0]} and question ${questionsArray[0]}`)
 
     // for (let i = 1; i < 26; i++){
     //     console.log(`NOW. HERE. THIS. answer ${answersArray[0]} and question ${questionsArray[0]}`)
@@ -185,7 +185,7 @@ $(document).ready(function () {
     //             $(this).css('background-color', 'red')
     //         }
     //     })
-    // }
+//     // }
 
     
     $('.container > .questionBox').on('click', this,  function() {
@@ -198,37 +198,75 @@ $(document).ready(function () {
             alert('and you call yourself an adult?')
             $(this).css('background-color', 'red') 
         }
+        console.log($(this).data('value'))
+        // let pointString = $(this.data('value')
+        // let pointNum = parseInt(pointString)
+        // $('.scoreContainer > .score').data('points', '0')
+        // let scoreString = $('.scoreContainer > .score').data('points')
+        // let scoreNum = parseInt(scoreString)
+        // console.log(scoreNum)
+
+        let pointString = $(this).data('value')
+        let pointNum = parseInt(pointString)
+        let scoreString = $('.score > p').data('points')
+        let scoreNum = parseInt(scoreString)
+        console.log(scoreNum)
+
+        let scoreNumDisplay
+        if (userResponse === answerQuestion[this.id].question) {
+            scoreNumDisplay = scoreNum + pointNum
+        } else {
+         scoreNumDisplay = scoreNum - pointNum
+        }
+        $('.score > p').text(`Score: ${scoreNumDisplay}`)
+        
     })
-
-
-
-
-
-
-
-
 })
 
+// console.log($('.container > #0').data('value'))
+// let pointString = $('.container > .q1').data('point-value')
+// let pointNum = parseInt(pointString)
+// $('.scoreContainer > .score').data('points', '0')
+// let scoreString = $('.scoreContainer > .score').data('points')
+// let scoreNum = parseInt(scoreString)
+// console.log(scoreNum)
 
-// let divClass = function(){
-//     let qArray = []
-//     for (let i = 0; i < 25; i++){
-//         qArray.push(i)
-//     } 
-//     let qValue = `q${q[i]}`
-//     return qValue
+// // let scoreNumDisplay;
+// // //ADDING POINTS
+// // if (testAnswer === "dow jones"){
+//  scoreNumDisplay = scoreNum + pointNum
+// } else {
+//  scoreNumDisplay = scoreNum - pointNum
 // }
 
+// // //SCORE THE USER SEES
+// // let scoreView = $('<p>')
+// // $('.scoreContainer > .score').append(scoreView)
+// // scoreView.text(`Score: ${scoreNumDisplay}`)
+// // })
 
 
 
 
-// // 
+// // let divClass = function(){
+// //     let qArray = []
+// //     for (let i = 0; i < 25; i++){
+// //         qArray.push(i)
+// //     } 
+// //     let qValue = `q${q[i]}`
+// //     return qValue
+// // }
 
-//ASSIGN QUESTIONS TO EACH POINT DIV
 
-//questions to ask
-//Is there a way to specifically assign a question to a particular DOM element?
-//I
 
-//ASSIGN DATA VALUES TO EACH POINT DIV
+
+
+// // // 
+
+// //ASSIGN QUESTIONS TO EACH POINT DIV
+
+// //questions to ask
+// //Is there a way to specifically assign a question to a particular DOM element?
+// //I
+
+// //ASSIGN DATA VALUES TO EACH POINT DIV
