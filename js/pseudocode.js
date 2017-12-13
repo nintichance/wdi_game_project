@@ -188,7 +188,7 @@ $(document).ready(function () {
 //     // }
 
     let clickCounter = 0
-    let playedAnswers = []
+    // let playedAnswers = []
     $('.container > .questionBox').on('click', this,  function() {
         console.log(this.id) 
         clickCounter += 1
@@ -197,17 +197,15 @@ $(document).ready(function () {
         if(userResponse === answerQuestion[this.id].question){
             alert('such a legit adulty person')
             $(this).css('background-color', 'green')
-            playedAnswers.push(this)
+            // playedAnswers.push(this)
         } else {
             alert('and you call yourself an adult?')
             $(this).css('background-color', 'red') 
-            playedAnswers.push(this)
+            // playedAnswers.push(this)
         }
-        console.log(playedAnswers.length)
-        console.log(playedAnswers)
-        console.log($(this).data('value'))
-
-        
+        // console.log(playedAnswers.length)
+        // console.log(playedAnswers)
+        // console.log($(this).data('value'))
         // let pointString = $(this.data('value')
         // let pointNum = parseInt(pointString)
         // $('.scoreContainer > .score').data('points', '0')
@@ -233,6 +231,11 @@ $(document).ready(function () {
             alert(`You have finished the game. Your score is ${scoreNumDisplay}. You must be an adult!`)
         }
     })
+    let notPlayable = function (){
+        if ($('.container > .questionBox').css('background-color')=== 'green' || $('.container > .questionBox').css('background-color')=== 'red'){
+            $(this).remove('questionBox')
+        }
+    }
 })
 
 //On the 25th click, this is the last condition... Interesting, sounds like an end condition to me...
