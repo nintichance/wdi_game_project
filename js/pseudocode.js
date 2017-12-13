@@ -218,6 +218,7 @@ $(document).ready(function () {
         } else {
          scoreNumDisplay = scoreNum - pointNum
         }
+        $('.score > p').data('points', scoreNumDisplay)
         $('.score > p').text(`Score: ${scoreNumDisplay}`)
         
     })
