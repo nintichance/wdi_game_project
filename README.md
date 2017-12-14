@@ -35,8 +35,6 @@ Everyone asks when they love a popular game if a second version will come out? W
 
 ![Wirefame:for cuties](https://i.imgur.com/n7oLgJ9.png)
 
-I would like to come back to this project and replace the prompt box with a question modul that I made. I would also like to combine my code from my 
-
 ---
 #### Libraries
 * Java Script - [Jquery](https://jquery.com/)
