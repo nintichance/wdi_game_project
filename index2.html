@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Modal Practice</title>
-    <link rel="stylesheet" href="style2.css">
-    
+    <title>Let's Play Jeopardy</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat|Rajdhani" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
-    <button id="modalBtn" class="button">Click Here</button>
+    <header>
+        <button id="instructions">INSTRUCTIONS</button>
+        <button><a href=/Users/nintichance/ga_wdi/projects/game_project/index.html>PLAY GAME</a></button>
+    </header>
+    <p>let's play jeopardy</p>
     <div id="simpleModal" class="modal">
-        <div class="modal-content">
-            <span class="closeBtn">Times</span>
-            <p>Hello...I am a modal</p>
+            <div class="modal-content">
+                <div class="modal-header">
+                        <span class="closeBtn">&times;</span>
+                        <h2>INSTRUCTIONS</h2>
+                </div>
+                <div class="modal-body">
+                    <p class="question">Hello! Welcome to Jeopardy:
+                            <span>Classic™</span>--The Game for Adulty Adults. Pick a category and click whichever points you may want to try
+                            for! If you get the answer correct, you will win that amount of points; however, if you get the answer wrong,
+                            you will lose that same number of points. You will be given four answer choices in the form of questions.
+                            I hope you win! Enjoy!</p>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script src ="js/main2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src =js/main2.js></script>
 </body>
 </html>
