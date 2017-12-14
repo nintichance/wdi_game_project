@@ -61,104 +61,104 @@ $(document).ready(function () {
     
     const answerQuestion = [
         {
-            answer:'When I need to iron my pants with a nice firm crease ready to impress all of my business peers, I use this ironing thingy.A. What is that stuff that comes in a spray bottle. I think its called starch.',
-            question: "A."
+            answer: "The vanishing of this adorable child catalyzed the major plot of Stranger Things.",
+            question: "Who is Will Byers?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This alternate dimension parallels our own. The kids refer to it by this name.",
+            question: "What is the Upside Down?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This fantastical monster kills Will's wizard in Mike's D&D campaign. It shares its name cleverly with this series nonhuman protagonist.",
+            question: "What is the demogorgon?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The city and state in which they live.",
+            question: "What is Hawkins, Indiana?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Dustin punnily renames the hive-minded monsters of the Upside Down, reminding the audience of Doug Dimmadome, the owner of the Dimsdale Dimmadome.",
+            question: "What are demodogs?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "She's Bojack's agent and long-time girlfriend",
+            question: "Who is Princess Carolyn?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The most adulty person in the series, despite being three children stacked on each other's shoulders in a trenchcoat",
+            question: "Who is Vincent Adultman?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Diane's ringtone consistely features pre-recorded ringtones from this radio station",
+            question: "What is NPR?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Back in the 90's Bojack starred in this very famous TV show.",
+            question: "What is Horsin' Around?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This sexy aquatic mammal took Sarah Lynn's place as America's idol",
+            question: "Who is Sextina Aquafina?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The composer of the theme song for Steven Universe in the Steven Universe universe",
+            question: "Who is Steven Universe?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This fusion came as a surprise to viewers. They are also beloved by the irredeemable, fashionable Kevin",
+            question: "Who is Stevonnie?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Steven, the Crystal gems, and all of Steven's friends live here",
+            question: "What is Beach City?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This character runs an online campaign to 'Keep Beach City Weird.'",
+            question: "Who is Ronoldo?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Onion's mother",
+            question: "Who is Vidalia?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This adorable character wears bunny ears everyday.",
+            question: "Who is Louise?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "He doesn't only voice our beloved Bob from Bob's Burgers, but also Archer",
+            question: "Who is H. Jon Benjamin?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "On the latest Thanksgiving special, the audience discovers, unsurprisingly, that this character is a horder due to childhood trauma",
+            question: "Who is Teddy?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Gene Belcher dresses as this amalgamation of mythical creature and foot item.",
+            question: "Who is Beefsquatch?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Complete this sentence: I've logged over _____ fantasy hours on my relationship with Jimmy Jr. You don't just throw that away.",
+            question: "What is 3000?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The lead character with a talent for words.",
+            question: "Who is Ezekiel Figuero?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Finish this sentence: 'Mylene, Mylene, my_____'",
+            question: "What is butterscotch queen?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This item was given to Shaolin by his mentor as a hint into becoming a master DJ.",
+            question: "What is a purple crayon?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Zeke is accepted into this Ivy League college, but his plans of attendance of thwarted by his best friend, Shaolin.",
+            question: "What is Yale?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This rapper heavily influences the acting and art of the show",
+            question: "Who is Nas?"
         }
     ]
 //     console.log('WE DID IT!', answerQuestion[0].answer)
@@ -189,19 +189,61 @@ $(document).ready(function () {
 
     let clickCounter = 0
     // let playedAnswers = []
+    let goodJob = function(){
+        alert('such an adulty person')
+    }
+
+    let tryAgain = function(){
+        alert('and you call yourself an adult?')
+    }
+    
+    let showQuestion = function(id){
+    return prompt(answerQuestion[id].answer)
+    }
+//read answer function that looks up the id of that box.
+//when the modul shows up showModal function is going to display the inpout box and then run the rest of the code that decides if the answer is right or not
+//clicking out of the modal checks to see if your question is right or wrong
+//The below line of code will go into the modul's submit click event
+// if(userResponse === answerQuestion[this.id].question){
+//     goodJob()
+//     $(this).css('background-color', 'green') 
+//     $(this).off()
+// } else {
+//     tryAgain()
+//     $(this).css('background-color', 'red') 
+//     $(this).off()
+// Modul's .text() must be answerQuestion[this.id] which I will call
+// in the click event
+// modul must have an input box with that will compare
+
+let inputBox = $('<input>')
+$('body > #simpleModal').append(inputBox)
+
+// let userResponse = inputBox.text()
+
+// if (userResponse === answerQuestion[i].question){
+//     //do the things
+// }
+
+// $(this).text(answerQuestion[i].answer)
+
+
+
+
     $('.container > .questionBox').on('click', this,  function() {
         console.log(this.id) 
         clickCounter += 1
         console.log(clickCounter)
-        let userResponse = prompt(answerQuestion[this.id].answer)
+        let userResponse = showQuestion(this.id)
         if(userResponse === answerQuestion[this.id].question){
-            alert('such an adulty person')
+            goodJob()
             $(this).css('background-color', 'green') 
             $(this).off()
         } else {
-            alert('and you call yourself an adult?')
+            tryAgain()
             $(this).css('background-color', 'red') 
             $(this).off()
+
             // playedAnswers.push(this)
         }
         // console.log(playedAnswers.length)

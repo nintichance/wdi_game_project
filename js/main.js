@@ -1,104 +1,104 @@
 $(document).ready(function(){
     const answerQuestion = [
         {
-            answer:'When I need to iron my pants with a nice firm crease ready to impress all of my business peers, I use this ironing thingy.A. What is that stuff that comes in a spray bottle. I think its called starch.',
-            question: "A."
+            answer: "The vanishing of this adorable child catalyzed the major plot of Stranger Things.",
+            question: "Who is Will Byers?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This alternate dimension parallels our own. The kids refer to it by this name.",
+            question: "What is the Upside Down?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This fantastical monster kills Will's wizard in Mike's D&D campaign. It shares its name cleverly with this series nonhuman protagonist.",
+            question: "What is the demogorgon?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The city and state in which they live.",
+            question: "What is Hawkins, Indiana?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Dustin punnily renames the hive-minded monsters of the Upside Down, reminding the audience of Doug Dimmadome, the owner of the Dimsdale Dimmadome.",
+            question: "What are demodogs?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "She's Bojack's agent and long-time girlfriend",
+            question: "Who is Princess Carolyn?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The most adulty person in the series, despite being three children stacked on each other's shoulders in a trenchcoat",
+            question: "Who is Vincent Adultman?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Diane's ringtone consistely features pre-recorded ringtones from this radio station",
+            question: "What is NPR?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Back in the 90's Bojack starred in this very famous TV show.",
+            question: "What is Horsin' Around?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This sexy aquatic mammal took Sarah Lynn's place as America's idol",
+            question: "Who is Sextina Aquafina?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The composer of the theme song for Steven Universe in the Steven Universe universe",
+            question: "Who is Steven Universe?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This fusion came as a surprise to viewers. They are also beloved by the irredeemable, fashionable Kevin",
+            question: "Who is Stevonnie?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Steven, the Crystal gems, and all of Steven's friends live here",
+            question: "What is Beach City?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This character runs an online campaign to 'Keep Beach City Weird.'",
+            question: "Who is Ronoldo?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Onion's mother",
+            question: "Who is Vidalia?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This adorable character wears bunny ears everyday.",
+            question: "Who is Louise?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "He doesn't only voice our beloved Bob from Bob's Burgers, but also Archer",
+            question: "Who is H. Jon Benjamin?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "On the latest Thanksgiving special, the audience discovers, unsurprisingly, that this character is a horder due to childhood trauma",
+            question: "Who is Teddy?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Gene Belcher dresses as this amalgamation of mythical creature and foot item.",
+            question: "Who is Beefsquatch?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Complete this sentence: I've logged over _____ fantasy hours on my relationship with Jimmy Jr. You don't just throw that away.",
+            question: "What is 3000?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "The lead character with a talent for words.",
+            question: "Who is Ezekiel Figuero?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Finish this sentence: 'Mylene, Mylene, my_____'",
+            question: "What is butterscotch queen?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This item was given to Shaolin by his mentor as a hint into becoming a master DJ.",
+            question: "What is a purple crayon?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "Zeke is accepted into this Ivy League college, but his plans of attendance of thwarted by his best friend, Shaolin.",
+            question: "What is Yale?"
         },
         {
-            answer: 'answer',
-            question: 'question'
+            answer: "This rapper heavily influences the acting and art of this show",
+            question: "Who is Nas?"
         }
     ]
     let clickCounter = 0
@@ -108,11 +108,9 @@ $(document).ready(function(){
         console.log(clickCounter)
         let userResponse = prompt(answerQuestion[this.id].answer)
         if(userResponse === answerQuestion[this.id].question){
-            alert('such a legit adulty person')
-            $(this).css('background-color', 'green')
+            $(this).css('background-color', 'rgba(25, 245, 13, 0.75)')
         } else {
-            alert('and you call yourself an adult?')
-            $(this).css('background-color', 'red') 
+            $(this).css('background-color', 'rgba(238, 4, 4, 0.75)') 
         }
         let pointString = $(this).data('value')
         let pointNum = parseInt(pointString)
@@ -130,5 +128,6 @@ $(document).ready(function(){
         if (clickCounter === 25){
             alert(`You have finished the game. Your score is ${scoreNumDisplay}. You must be an adult!`)
         }
+
     })
 })
