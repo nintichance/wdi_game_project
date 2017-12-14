@@ -1,0 +1,114 @@
+html{
+    display: flex;
+    justify-content: center;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+
+p{
+    color: pink;
+    font-size: 72px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 100;
+}
+a{
+    text-decoration: none;
+    color: #eee;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+header, p {
+    margin: 100px;
+}
+button {
+    margin: 0 30px;
+    height: 60px;
+    width: 170px;
+    background-color: rgba(0,0,0,0.1);
+    /* border-color: black; */
+    color: #eee;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+    border-color: black;
+   
+}
+
+button:hover{
+    border-color: #eee;
+}
+
+.question {
+    font-size: 16px;
+    font-family:'Montserrat';
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0; 
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content{
+    background-color: rgba(51,50,50, 0.5);
+    margin: 10% auto; /*Change me to move me around the screen */
+    width: 40%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 1s;
+    border-radius: 4px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-header > h2, .modal-footer > h3{
+    margin: 0;
+}
+.modal-header{
+    background-color: black;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.modal-body{
+    padding: 10px 20px;
+    color: white;
+}
+
+
+.closeBtn {
+    color: white;
+    float: right;
+    font-size: 30px;
+    align-self: flex-end;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes modalopen{
+    from{opacity: 0};
+    to{opacity: 1};
+}
+
