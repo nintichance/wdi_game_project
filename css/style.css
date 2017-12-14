@@ -109,19 +109,19 @@ header, footer{
     border: 1px white solid;
 }
 .container > .stranger:hover{
-background-color: rgba(206, 11, 37, 0.75)
+background-color: rgba(231, 5, 35, 0.80)
 }
 .container > .steven:hover{
-    background-color: rgba(116, 23, 77, 0.75);
+    background-color: rgba(212, 16, 130, 0.89);
 }
 .container > .bojack:hover{
-    background-color: rgba(9, 2, 41, 0.95);
+    background-color: rgba(66, 4, 182, 0.75);
 }
 .container > .archer:hover{
     background-color: rgba(0, 255, 242, 0.75);
 }
 .container > .down:hover{
-    background-color: rgba(255, 136, 0, 0.75);
+    background-color: rgba(255, 136, 0, 0.80);
 }
 a { 
     text-decoration: none;
@@ -138,7 +138,7 @@ a {
     color:white;
 }
 .score:hover{
-    background-color: rgba(255, 230, 0, 0.904)
+    background-color: rgba(0, 255, 191, 0.6)
 }
 
 .steven, .stranger, .bojack, .archer, .down{
@@ -152,5 +152,15 @@ a {
 
 .default{
     margin-left: 5px;
+}
+
+.end-game:hover{
+    background-color:rgba(0, 140, 255, 0.7)
+}
+.play-again:hover{
+    background-color:rgba(255, 0, 140, 0.7);
+}
+.instructionsFooter:hover{
+    background-color:rgba(255, 230, 0, 0.7);
 }
 

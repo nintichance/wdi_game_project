@@ -19,7 +19,7 @@ This project taught me that not only did I learn a lot of syntax and concept in 
 ---
 
 #### Version Two?
-Everyone asks when they love a popular game if a second version will come out? Well, in version two, we will have a better question prompt in the form of a modul, randomized categories, and a new slick design! Get ready to play your friends and family because we will also introduce multi-player.
+Everyone asks when they love a popular game if a second version will come out? Well, in version two, we will have a better question prompt in the form of a modul, randomized categories, and a new slick design! Get ready to play your friends and family because we will also introduce multi-player. Finally, we will soon offer a version for phones!
 
 # The Planning Stages
 [Figma: Cute Wireframe](https://www.figma.com/file/78kqvgwZUoQiDUtbOD7aqa/Jeopardy%3A-%23Friendship-is-Magic-(Classic)?node-id=1%3A2)

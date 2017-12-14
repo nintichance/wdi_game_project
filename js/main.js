@@ -120,8 +120,10 @@ $(document).ready(function(){
         let scoreNumDisplay
         if (userResponse === answerQuestion[this.id].question) {
             scoreNumDisplay = scoreNum + pointNum
+           
         } else {
          scoreNumDisplay = scoreNum - pointNum
+       
         }
         $('.score > p').data('points', scoreNumDisplay)
         $('.score > p').text(`Score: ${scoreNumDisplay}`)
