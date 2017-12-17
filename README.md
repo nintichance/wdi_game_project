@@ -14,7 +14,7 @@ This project taught me that not only did I learn a lot of syntax and concept in 
 ---
 
 #### Want to play?
-[Bitballoon: Game Website](jeopardy-ninti.bitballoon.com)
+[Bitballoon: Game Website](http://jeopardy-homepage.bitballoon.com/)
 
 ---
 

@@ -5,36 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Let's Play Jeopardy</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat|Rajdhani" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>JEOPARDY: Classic</title>
 </head>
 
 <body>
-    <header>
-        <button id="instructions">INSTRUCTIONS</button>
-        <button>
-            <a href=/Users/nintichance/ga_wdi/projects/game_project/index2.html>PLAY GAME</a>
-        </button>
-    </header>
-    <p>let's play jeopardy</p>
-    <div id="simpleModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="closeBtn">&times;</span>
-                <h2>INSTRUCTIONS</h2>
+    <header><p>-tv shows-</p><h1>Jeopardy</h1><p>-tv shows-</p></header>
+    <main>
+        <div class="scoreContainer">
+            <div class="instructions">
+
             </div>
-            <div class="modal-body">
-                <p class="question">Hello! Welcome to Jeopardy! Pick a category and click whichever points you may want
-                    to try for! Be sure to phrase your answers in question form, using proper punctuation and capitalization.
-                     Enjoy!</p>
+            <div class="score">
+                <p data-points="0">Score:</p>
             </div>
         </div>
-    </div>
-
+        <div class="container">
+            <div class="stranger">Stranger Things</div>
+            <div class="bojack">Bojack Horseman</div>
+            <div class="steven">Steven Universe</div>
+            <div class="archer">Bob's Burgers</div>
+            <div class="down">The Get Down</div>
+            <div class="questionBox" id="0" data-value="100">100</div>
+            <div class="questionBox" id="5" data-value="100">100</div>
+            <div class="questionBox" id="10" data-value="100">100</div>
+            <div class="questionBox" id="15" data-value="100">100</div>
+            <div class="questionBox" id="20" data-value="100">100</div>
+            <div class="questionBox" id="1" data-value="200">200</div>
+            <div class="questionBox" id="6" data-value="200">200</div>
+            <div class="questionBox" id="11" data-value="200">200</div>
+            <div class="questionBox" id="16" data-value="200">200</div>
+            <div class="questionBox" id="21" data-value="200">200</div>
+            <div class="questionBox" id="2" data-value="300">300</div>
+            <div class="questionBox" id="7" data-value="300">300</div>
+            <div class="questionBox" id="12" data-value="300">300</div>
+            <div class="questionBox" id="17" data-value="300">300</div>
+            <div class="questionBox" id="22" data-value="300">300</div>
+            <div class="questionBox" id="3" data-value="400">400</div>
+            <div class="questionBox" id="8" data-value="400">400</div>
+            <div class="questionBox" id="13" data-value="400">400</div>
+            <div class="questionBox" id="18" data-value="400">400</div>
+            <div class="questionBox" id="23" data-value="400">400</div>
+            <div class="questionBox" id="4" data-value="500">500</div>
+            <div class="questionBox" id="9" data-value="500">500</div>
+            <div class="questionBox" id="14" data-value="500">500</div>
+            <div class="questionBox" id="19" data-value="500">500</div>
+            <div class="questionBox" id="24" data-value="500">500</div>
+        </div>
+    </main>
+    <footer>
+        <div class="instructionsFooter">
+            <p>
+                <a href="http://jeopardy-homepage.bitballoon.com">Instructions</a>
+            </p>
+        </div>
+        <div class="end-game">
+            <p>
+                <a href="http://jeopardy-homepage.bitballoon.com">End Game</a>
+            </p>
+        </div>
+        <div class="play-again">
+            <p>
+                <a href="http://jeopardy-ninti.bitballoon.com">Play Again</a>
+            </p>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src=js/main2.js></script>
+    <script src=js/main.js></script>
 </body>
 
 </html>

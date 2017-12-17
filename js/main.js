@@ -62,7 +62,7 @@ $(document).ready(function(){
         },
         {
             answer: "This adorable character wears bunny ears everyday.",
-            question: "Who is Louise?"
+            question: "Who is Louise Belcher?"
         },
         {
             answer: "He doesn't only voice our beloved Bob from Bob's Burgers, but also Archer",
@@ -102,34 +102,32 @@ $(document).ready(function(){
         }
     ]
     let clickCounter = 0
+
     $('.container > .questionBox').on('click', this,  function() {
-        console.log(this.id) 
         clickCounter += 1
-        console.log(clickCounter)
-        let userResponse = prompt(answerQuestion[this.id].answer)
-        if(userResponse === answerQuestion[this.id].question){
-            $(this).css('background-color', 'rgba(25, 245, 13, 0.75)')
-        } else {
-            $(this).css('background-color', 'rgba(238, 4, 4, 0.75)') 
-        }
         let pointString = $(this).data('value')
         let pointNum = parseInt(pointString)
         let scoreString = $('.score > p').data('points')
         let scoreNum = parseInt(scoreString)
-        console.log(scoreNum)
         let scoreNumDisplay
-        if (userResponse === answerQuestion[this.id].question) {
+        let answer = answerQuestion[this.id].question.toLowerCase()
+        let userResponse = prompt(answerQuestion[this.id].answer).toLowerCase()
+
+        if(userResponse === answer){
+            $(this).css('background-color', 'rgba(25, 245, 13, 0.75)')
             scoreNumDisplay = scoreNum + pointNum
-           
         } else {
-         scoreNumDisplay = scoreNum - pointNum
-       
+            $(this).css('background-color', 'rgba(238, 4, 4, 0.75)') 
+            scoreNumDisplay = scoreNum - pointNum   
         }
+       
         $('.score > p').data('points', scoreNumDisplay)
         $('.score > p').text(`Score: ${scoreNumDisplay}`)
-        if (clickCounter === 25){
-            alert(`You have finished the game. Your score is ${scoreNumDisplay}. You must be an adult!`)
-        }
+        $(this).off()
 
+        if (clickCounter === 25){
+            alert(`You have finished the game. Your score is ${scoreNumDisplay}. Thank you for playing!`)
+        } 
+        
     })
 })

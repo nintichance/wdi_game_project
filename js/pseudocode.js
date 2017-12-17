@@ -189,13 +189,13 @@ $(document).ready(function () {
 
     let clickCounter = 0
     // let playedAnswers = []
-    let goodJob = function(){
-        alert('such an adulty person')
-    }
+    // let goodJob = function(){
+    //     alert('such an adulty person')
+    // }
 
-    let tryAgain = function(){
-        alert('and you call yourself an adult?')
-    }
+    // let tryAgain = function(){
+    //     alert('and you call yourself an adult?')
+    // }
     
     let showQuestion = function(id){
     return prompt(answerQuestion[id].answer)
@@ -216,8 +216,8 @@ $(document).ready(function () {
 // in the click event
 // modul must have an input box with that will compare
 
-let inputBox = $('<input>')
-$('body > #simpleModal').append(inputBox)
+// let inputBox = $('<input>')
+// $('body > #simpleModal').append(inputBox)
 
 // let userResponse = inputBox.text()
 
